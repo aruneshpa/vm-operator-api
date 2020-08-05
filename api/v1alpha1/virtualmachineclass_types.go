@@ -43,6 +43,9 @@ type VirtualMachineClassSpec struct {
 	// policy.  The configuration specified in this field is used to customize various policies related to
 	// infrastructure resource consumption.
 	Policies VirtualMachineClassPolicies `json:"policies,omitempty"`
+
+	// +optional
+	// AllowedNamespaces metav1.LabelSelector `json:"allowedNamespaces" protobuf:"bytes,2,opt,name=allowedNamespaces"`
 }
 
 // VirtualMachineClassStatus defines the observed state of VirtualMachineClass.  VirtualMachineClasses are immutable,

@@ -214,6 +214,9 @@ type VirtualMachineSpec struct {
 	// responding to the probe.
 	// +optional
 	ReadinessProbe *Probe `json:"readinessProbe,omitempty"`
+
+	// +optional
+	ClassInfo *VirtualMachineClassSpec `json:"classInfo,omitempty"`
 }
 
 // VirtualMachineVolumeStatus defines the observed state of a VirtualMachineVolume instance.
